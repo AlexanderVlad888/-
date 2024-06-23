@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9c628414-8b0b-419f-96ab-da7299bab33f}</ProjectGuid>
-    <RootNamespace>My63Иерархияклассов</RootNamespace>
+    <ProjectGuid>{8d81c01a-fca1-4e17-87d9-9b0139badb49}</ProjectGuid>
+    <RootNamespace>My83Исключениевконструкторах</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>8.2 Исключение в конструкторах</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,29 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="8.2 Исключение конструкторов.cpp" />
-    <ClCompile Include="Figure.cpp" />
-    <ClCompile Include="Parallellogram.cpp" />
-    <ClCompile Include="Quadrangle.cpp" />
-    <ClCompile Include="Quadrangle90.cpp" />
-    <ClCompile Include="Quadrat.cpp" />
-    <ClCompile Include="Romb.cpp" />
-    <ClCompile Include="Triangle.cpp" />
-    <ClCompile Include="Triangle90.cpp" />
-    <ClCompile Include="TriangleABC.cpp" />
-    <ClCompile Include="TriangleAC_ac.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Figure.h" />
-    <ClInclude Include="Parallellogram.h" />
-    <ClInclude Include="Quadrangle.h" />
-    <ClInclude Include="Quadrangle90.h" />
-    <ClInclude Include="Quadrat.h" />
-    <ClInclude Include="Romb.h" />
-    <ClInclude Include="Triangle.h" />
-    <ClInclude Include="Triangle90.h" />
-    <ClInclude Include="TriangleABC.h" />
-    <ClInclude Include="TriangleAC_ac.h" />
+    <ClCompile Include="8.3 Исключение в конструкторах.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
