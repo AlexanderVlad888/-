@@ -13,7 +13,7 @@ public:
     denominator_ = denominator;
   }
   //переопределение операторов
-Fraction operator+(Fraction op_l) {
+Fraction operator+(const Fraction& op_l)  {
   int numerator = numerator_ * op_l.denominator_ + op_l.numerator_ * denominator_;
   int denominator = denominator_ * op_l.denominator_;
   

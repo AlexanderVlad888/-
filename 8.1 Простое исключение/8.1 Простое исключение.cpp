@@ -1,5 +1,11 @@
 ﻿#include <iostream>
+#include <excpt.h>
 
+class MySuperException : public std::domain_error
+{
+public:
+    MySuperException(std::string text) :std::domain_error(text) {}
+};
 
 int function(std::string str, int forbidden_length)
 {
@@ -9,12 +15,14 @@ int function(std::string str, int forbidden_length)
 
 
     if (count == forbidden_length) {
-        throw "Вы ввели слово запретной длины!";
+        throw MySuperException("Вы ввели слово запретной длины");
     }
 
 
     return count;
 }
+
+
 
 
 
@@ -37,9 +45,9 @@ int main() {
             res = function(text, forbidden_length);
 
         }
-        catch (const char* exception)
+        catch (MySuperException ex)
         {
-            std::cout << exception << std::endl;
+            std::cout << ex.what() << std::endl;
             std::cout << "До свидания!" << std::endl;
             return 12;
         }

@@ -12,12 +12,14 @@ public:
         numerator_ = numerator;
         denominator_ = denominator;
     }
-    bool operator==(Fraction op_r) {
-        numerator_ = numerator_ * op_r.denominator_;
-        op_r.numerator_ = op_r.numerator_ * denominator_;
-        return numerator_ == op_r.numerator_;
+    bool operator==( Fraction op_r)   {
+        int num = numerator_ * op_r.denominator_;
+        int num_op_r = op_r.numerator_ * denominator_;
+        //numerator_ = numerator_ * op_r.denominator_;
+        //op_r.numerator_ = op_r.numerator_ * denominator_;
+        return num == num_op_r;
     }
-    bool operator!=(Fraction op_r) {
+    bool operator!=( Fraction op_r)  {
         /*numerator_ = numerator_ * op_r.denominator_;
         op_r.numerator_ = op_r.numerator_ * denominator_;
         return numerator_ == op_r.numerator_;*/
@@ -25,9 +27,9 @@ public:
     }
 
     bool operator<(Fraction op_r) {
-        numerator_ = numerator_ * op_r.denominator_;
-        op_r.numerator_ = op_r.numerator_ * denominator_;
-        return numerator_ < op_r.numerator_;
+        int num = numerator_ * op_r.denominator_;
+        int num_op_r = op_r.numerator_ * denominator_;
+        return num < num_op_r;
     }
     bool operator>(Fraction op_r) {
         return    op_r < *this;
@@ -42,7 +44,7 @@ public:
 
 int main()
 {
-    Fraction f1(6, 11);
+    Fraction f1(7, 11);
     Fraction f2(6, 11);
 
     std::cout << "f1" << ((f1 == f2) ? " == " : " not == ") << "f2" << '\n';
